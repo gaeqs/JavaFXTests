@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="pane" accessibleRole="NODE" style="-fx-background-color: #3B3F42;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label fx:id="text" layoutX="28.0" layoutY="14.0" onMouseEntered="#testHandler" onMouseExited="#testHandler" prefHeight="362.0" prefWidth="307.0" text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit sollicitudin malesuada. Aliquam ut mauris vel tellus volutpat malesuada. Nulla dapibus nunc eu augue bibendum mattis in in felis. Praesent tristique, nibh sed aliquet vulputate, erat justo porttitor nisi, mattis interdum elit massa quis quam. Cras vitae elit sem. Nunc tincidunt non felis in bibendum. Sed elementum, turpis eget sollicitudin pellentesque, quam lacus ultrices sem, eu volutpat quam magna a nulla. Mauris nec libero quis nisi fermentum condimentum. Nunc elementum velit sapien, venenatis fringilla justo fringilla egestas. Phasellus vel purus velit. Curabitur sit amet blandit nunc. " textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <Circle fx:id="circle" fill="DODGERBLUE" onMouseEntered="#onCircleJoin" onMouseExited="#onCircleLeave" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+         </graphic></Label>
+      <Button layoutX="397.0" layoutY="94.0" mnemonicParsing="false" text="Button" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="397.0" layoutY="253.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Rectangle fx:id="topBar" arcHeight="5.0" fill="#7575757a" height="18.0" stroke="#323232" strokeType="INSIDE" width="1000.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="-1.0" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
