@@ -1,21 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane fx:id="pane" accessibleRole="NODE" style="-fx-background-color: #3B3F42;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane id="mainpane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="956.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label fx:id="text" layoutX="28.0" layoutY="14.0" onMouseEntered="#testHandler" onMouseExited="#testHandler" prefHeight="362.0" prefWidth="307.0" text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit sollicitudin malesuada. Aliquam ut mauris vel tellus volutpat malesuada. Nulla dapibus nunc eu augue bibendum mattis in in felis. Praesent tristique, nibh sed aliquet vulputate, erat justo porttitor nisi, mattis interdum elit massa quis quam. Cras vitae elit sem. Nunc tincidunt non felis in bibendum. Sed elementum, turpis eget sollicitudin pellentesque, quam lacus ultrices sem, eu volutpat quam magna a nulla. Mauris nec libero quis nisi fermentum condimentum. Nunc elementum velit sapien, venenatis fringilla justo fringilla egestas. Phasellus vel purus velit. Curabitur sit amet blandit nunc. " textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
-         <graphic>
-            <Circle fx:id="circle" fill="DODGERBLUE" onMouseEntered="#onCircleJoin" onMouseExited="#onCircleLeave" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Label>
-      <Button layoutX="397.0" layoutY="94.0" mnemonicParsing="false" text="Button" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
-      <Button layoutX="397.0" layoutY="253.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <Rectangle fx:id="topBar" arcHeight="5.0" fill="#7575757a" height="18.0" stroke="#323232" strokeType="INSIDE" width="1000.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="-1.0" />
+      <MenuBar prefHeight="29.0" prefWidth="596.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="This is a very long menu item" />
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.2, 0.5" layoutY="29.0" prefHeight="589.0" prefWidth="859.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+        <items>
+            <AnchorPane prefHeight="582.0" prefWidth="213.0" />
+            <TabPane prefHeight="200.0" prefWidth="200.0" styleClass="pane" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                     <content>
+                        <TextArea prefHeight="549.0" prefWidth="46.0" text="TEST" />
+                     </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                     <content>
+                        <TextArea prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="402.0">
+               <children>
+                  <Slider layoutX="74.0" layoutY="87.0" orientation="VERTICAL" />
+                  <Slider layoutX="210.0" layoutY="87.0" orientation="VERTICAL" />
+                  <Slider layoutX="269.0" layoutY="87.0" orientation="VERTICAL" />
+                  <Slider layoutX="210.0" layoutY="275.0" orientation="VERTICAL" />
+                  <Slider layoutX="104.0" layoutY="275.0" orientation="VERTICAL" />
+                  <Slider layoutX="45.0" layoutY="275.0" orientation="VERTICAL" />
+                  <Slider layoutX="238.0" layoutY="399.0" />
+                  <RadioButton layoutX="112.0" layoutY="36.0" mnemonicParsing="false" text="RadioButton" />
+                  <CheckBox layoutX="119.0" layoutY="108.0" mnemonicParsing="false" text="CheckBox" />
+                  <ProgressBar layoutX="26.0" layoutY="478.0" prefWidth="200.0" progress="0.56" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
    </children>
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
 </AnchorPane>
