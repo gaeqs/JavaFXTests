@@ -30,6 +30,7 @@
 .text-area .content {
     -fx-background-color: -theme-background-text-area;
     -fx-background-radius: 0;
+
 }
 
 /*TEXT FIELD*/
@@ -363,4 +364,33 @@ AnchorPane {
 
 .slider .thumb {
     -fx-background-color: -theme-background-focused;
+}
+
+/*PANE MENU*/
+.pane-menu {
+    -fx-background-color: -theme-background;
+    -fx-border-color: -theme-background-darker;
+    -fx-border-width: 10px;
+}
+
+.left-pane-menu {
+    -fx-border-width: 0 1 0 0;
+}
+
+.right-pane-menu {
+    -fx-border-width: 0 0 0 1;
+}
+
+/*PANE MENU BUTTON*/
+.pane-menu-button {
+    -fx-border-width: 0;
+    -fx-label-padding: -200;
+}
+
+.pane-menu-button:selected {
+    -fx-background-color: -theme-background-darker;
+}
+
+.pane-menu-button .text {
+    -fx-rotate: -90;
 }
