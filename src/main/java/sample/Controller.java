@@ -2,8 +2,6 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -32,8 +30,7 @@ public class Controller {
 
 		filesTabPane.getTabs().add(new FileTab("New file"));
 
-		MenuItem item = new MenuItem("Patata");
-		item.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/index.png"))));
+		MenuItem item = new MenuItem("Test2");
 		item.setAccelerator(KeyCombination.valueOf("Ctrl+C"));
 
 		mainMenu.getMenus().add(new Menu("Test", null, item));
