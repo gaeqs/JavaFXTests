@@ -317,6 +317,7 @@ AnchorPane {
 /*MENU BAR*/
 .menu-bar {
     -fx-background-color: -theme-background-darker;
+    -fx-padding: 0;
 }
 
 .menu:hover {
@@ -393,4 +394,9 @@ AnchorPane {
 
 .pane-menu-button .text {
     -fx-rotate: -90;
+}
+
+/*PROJECT MENU*/
+.project-menu {
+    -fx-background-color: -theme-background-darker;
 }

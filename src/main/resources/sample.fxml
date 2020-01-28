@@ -1,46 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import java.lang.String?>
-<AnchorPane id="mainpane" fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="613.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+<AnchorPane id="mainpane" fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <MenuBar prefHeight="30.0" prefWidth="596.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <MenuBar fx:id="mainMenu" prefHeight="30.0" prefWidth="596.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Menu">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close"/>
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="This is a very long menu item"/>
-                        <MenuItem mnemonicParsing="false" text="Undo"/>
-                        <MenuItem mnemonicParsing="false" text="Delete"/>
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="About"/>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox fx:id="leftPaneMenu" layoutY="31.0" minWidth="30.0" prefHeight="582.0" prefWidth="30.0"
-              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="31.0">
+        <VBox fx:id="leftSidebar" layoutY="31.0" minWidth="0.0" prefHeight="553.0" prefWidth="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0">
             <styleClass>
-                <String fx:value="pane-menu"/>
-                <String fx:value="left-pane-menu"/>
+                <String fx:value="pane-menu" />
+                <String fx:value="left-pane-menu" />
             </styleClass>
         </VBox>
-        <SplitPane fx:id="mainPane" layoutX="92.0" layoutY="31.0" prefHeight="582.0" prefWidth="864.0"
-                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0"
-                   AnchorPane.topAnchor="30.0">
+        <HBox fx:id="leftProjectMenu" layoutY="30.0" prefHeight="30.0" prefWidth="927.0" styleClass="project-menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+        <HBox fx:id="rightProjectMenu" alignment="TOP_RIGHT" layoutX="800.0" layoutY="30.0" prefHeight="30.0" prefWidth="256.0" styleClass="project-menu" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+        <SplitPane fx:id="mainPane" layoutX="92.0" layoutY="31.0" prefHeight="582.0" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
             <items>
-                <TabPane fx:id="filesTabPane" prefHeight="200.0" prefWidth="200.0" styleClass="pane"
-                         tabClosingPolicy="UNAVAILABLE">
+                <TabPane fx:id="filesTabPane" prefHeight="200.0" prefWidth="200.0" styleClass="pane" tabClosingPolicy="UNAVAILABLE">
                 </TabPane>
             </items>
         </SplitPane>
